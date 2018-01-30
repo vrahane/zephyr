@@ -1,0 +1,89 @@
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#  http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+
+config TINYCBOR
+	bool
+	prompt "tinyCBOR Support"
+	default n
+	help
+	  This option enables the tinyCBOR library.
+
+config CBOR_NO_DFLT_WRITER
+	bool
+  depends on TINYCBOR
+	prompt "No default writer"
+	default n
+	help
+	  This option specifies whether a default writer exists.
+
+config CBOR_NO_DFLT_READER
+	bool
+  depends on TINYCBOR
+	prompt "No default reader"
+	default n
+	help
+	  This option specifies whether a default reader exists.
+
+config CBOR_ENCODER_NO_CHECK_USER
+	bool
+  depends on TINYCBOR
+	prompt "No check user for cbor encoder"
+	default n
+	help
+	  This option specifies whether a check user exists for a cbor encoder.
+
+config CBOR_PARSER_MAX_RECURSIONS
+	int
+  depends on TINYCBOR
+	prompt "Parser max recursions"
+	default 1024
+	help
+	  This option specifies max recursions for the parser.
+
+config CBOR_PARSER_NO_STRICT_CHECKS
+	bool
+  depends on TINYCBOR
+	prompt "No strict parser checks"
+	default n
+	help
+	  This option enables the strict parser checks.
+
+config CBOR_NO_FLOATING_POINT
+	bool
+  depends on TINYCBOR
+	prompt "No floating point support"
+	default n
+	help
+	  This option enables floating point support.
+
+config CBOR_NO_HALF_FLOAT_TYPE
+	bool
+  depends on TINYCBOR
+	prompt "No half float type"
+	default n
+	help
+	  This option enables half float type support.
+
+config CBOR_WITHOUT_OPEN_MEMSTREAM
+	bool
+  depends on TINYCBOR
+	prompt "without open memstream"
+	default n
+	help
+	  This option enables open memstream support.
